@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kunde Register</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/2.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css.css">
+    <script src="script.js"></script>
+</head>
+<body>
+<h2>Kunde Register</h2>
+<table class="table table-striped">
+    <thead class="thead-dark">
+    <tr>
+        <th>Navn</th>
+        <th>Adresse</th>
+        <th>E-post</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><input type="text" id="navn"></td>
+        <td><input type="text" id="adresse"></td>
+        <td><input type="text" id="epost"></td>
+    </tr>
+    <tr>
+        <td><button onclick="regKunde()">Register</button></td>
+    </tr>
+    <tr>
+        <th>Kunde Liste</th>
+        <td><div id="kundeliste"></div></td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="slettAlleKunder();">Slett</button>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
