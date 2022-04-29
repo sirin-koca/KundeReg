@@ -26,3 +26,6 @@ Registrere data på server via H2 in-memory database, enkle CRUD operations.
 * Spring Data JPA
 * H2 in-memory database (SQL)
 
+---
+
+SK | OsloMet | 22
