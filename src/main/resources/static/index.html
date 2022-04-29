@@ -24,20 +24,29 @@
         <td><input type="text" id="adresse"></td>
         <td><input type="text" id="epost"></td>
     </tr>
-    <tr>
-        <td><button onclick="regKunde()">Register</button></td>
-    </tr>
+    </tbody>
+</table>
+<button onclick="regKunde()">Register</button>
+
+<br/>
+
+<table class="table table-striped">
+    <thead>
     <tr>
         <th>Kunde Liste</th>
-        <td><div id="kundeliste"></div></td>
     </tr>
+    </thead>
+    <tbody>
     <tr>
         <td>
-            <button onclick="slettAlleKunder();">Slett</button>
+            <div id="kundeliste"></div>
         </td>
     </tr>
     </tbody>
 </table>
+
+<button onclick="slettAlleKunder();">Slett</button>
+
 
 </body>
 </html>
