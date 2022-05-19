@@ -8,8 +8,10 @@ function regKunde(){
     $.post("/lagre", kunde, function (){
         hentAlle();
     });
+
     $("#navn").val("");
     $("#adresse").val("");
+    $("#epost").val("");
 }
 
 function hentAlle(){
@@ -27,12 +29,12 @@ function formaterData(kunder){
             "</td></tr>";
     }
     ut+= "</table>";
-    $("#kundeliste").html(ut);
+    $("#kundene").html(ut);
 }
 
 function slettAlleKunder(){
     $.get("/slett", function (){
         hentAlle();
-        $("#kundeliste").html(null);
+        $("#kundene").html(null);
     });
 }

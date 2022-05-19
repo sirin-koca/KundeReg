@@ -9,33 +9,60 @@
     <script src="script.js"></script>
 </head>
 <body>
-<div class="container">
-    <div class="row">
-        <div class="col-md-4">
-            <h2>Kunde Register</h2>
-            <form class="form">
-                <div class="form-group">
-                    <label for="navn">Navn</label>
-                    <input type="text" class="form-control" id="navn"/>
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Example 1</th>
+        <th>Example 2</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-4">
+                        <h3>Kunde Register</h3>
+                        <form class="form">
+                            <div class="form-group">
+                                <label for="navn">Navn</label>
+                                <input type="text" class="form-control" id="navn"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="adresse">Adresse</label>
+                                <input type="text" class="form-control" id="adresse"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="epost">E-post</label>
+                                <input type="text" class="form-control" id="epost"/>
+                            </div>
+                        </form>
+                        <button class="btn btn-primary" onclick="regKunde()">Registrer</button>
+                        <br/>
+                    </div>
+                    <div class="col-sm-6 col-md-8">
+                        <h3>Alle kundene:</h3>
+                        <div id="kundene"></div>
+                        <button class="btn btn-danger" onclick="slettAlleKunder()">Slett alle kunder</button>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="adresse">Adresse</label>
-                    <input type="text" class="form-control" id="adresse"/>
-                </div>
-                <div class="form-group">
-                    <label for="epost">E-post</label>
-                    <input type="text" class="form-control" id="epost"/>
-                </div>
-            </form>
-            <button class="btn btn-primary" onclick="regKunde()">Registrer</button>
-            <br/>
-        </div>
-        <div class="col-md-8">
-            <h3>Alle kundene:</h3>
-            <div id="kundene"></div>
-            <button class="btn btn-danger" onclick="slettAlleKunder()">Slett alle kunder</button>
-        </div>
-    </div>
-</div>
+            </div>
+        </td>
+        <td>
+            <div class="container">
+                <div id="kundediv"></div>
+                <a class="btn btn-primary" href="/lagreKunde.html">Register ny kunde</a>
+                <a class="btn btn-danger" onclick="slettAlleKunder()">Slett alle kunder</a>
+            </div>
+        </td>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+        <td colspan="2"></td>
+    </tr>
+    </tfoot>
+</table>
+
 </body>
 </html>

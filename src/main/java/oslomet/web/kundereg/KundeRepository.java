@@ -19,7 +19,8 @@ public class KundeRepository {
         db.update(sql,
                 innKunde.getNavn(),
                 innKunde.getAdresse(),
-                innKunde.getEpost());
+                innKunde.getEpost()
+        );
     }
 
     public List<Kunde> hentAlleKunder() {

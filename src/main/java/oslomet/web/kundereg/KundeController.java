@@ -10,6 +10,30 @@ import java.util.*;
 @RestController
 public class KundeController {
 
+    List<Kunde> kunder = new ArrayList<>();
+
+    @GetMapping("hentkunder")
+    public List<Kunde> alleKunder(){
+        return kunder;
+    }
+    @GetMapping("hentBiler")
+    public List<Bil> hentBiler(){
+        List<Bil> listBiler = new ArrayList<>();
+        listBiler.add(new Bil("Audi", "A4"));
+        listBiler.add(new Bil("Audi", "A8"));
+        listBiler.add(new Bil("Volvo", "T8"));
+        return listBiler;
+    }
+    @PostMapping("lagreKunde")
+    public void leggTilKunde(Kunde innKunde){
+        kunder.add(innKunde);
+    }
+
+    @GetMapping("slettAlleKunder")
+    public void slettAlleKunder(){
+        kunder.clear();
+    }
+
     @Autowired
     private KundeRepository rep;
 
