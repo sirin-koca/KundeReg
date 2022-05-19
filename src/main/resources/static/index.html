@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Kunde Register</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/2.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="css.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="bilkunde.js"></script>
     <script src="script.js"></script>
 </head>
 <body>
@@ -43,16 +44,44 @@
                     <div class="col-sm-6 col-md-8">
                         <h3>Alle kundene:</h3>
                         <div id="kundene"></div>
-                        <button class="btn btn-danger" onclick="slettAlleKunder()">Slett alle kunder</button>
+                        <button class="btn btn-danger" onclick="slettAlleKunder()">Slett</button>
                     </div>
                 </div>
             </div>
         </td>
         <td>
             <div class="container">
-                <div id="kundediv"></div>
-                <a class="btn btn-primary" href="/lagreKunde.html">Register ny kunde</a>
-                <a class="btn btn-danger" onclick="slettAlleKunder()">Slett alle kunder</a>
+                <h3>Lagre Kunde</h3>
+                <form class="form">
+                    <div class="form-group">
+                        <label for="fornavn">Fornavn</label>
+                        <input type="text" id="fornavn"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="etternavn">Etternavn</label>
+                        <input type="text" id="etternavn"/>
+                    </div>
+                    <div class="form-group">
+                        Førerkort?
+                        <input type="checkbox" name="forerkort"/>
+                    </div>
+                    <div class="form-group">
+                        Bil: Audi
+                        <input type="radio" value="Audi" name="valgtBil"/>
+                    </div>
+                    <div class="form-group">
+                        Bil: Volvo
+                        <input type="radio" value="Volvo" name="valgtBil"/>
+                    </div>
+                    <div class="form-group">
+                        <input type="button" value="Register" class="btn btn-primary" onclick="lagreKunde()"/>
+                    </div>
+                </form>
+            </div>
+            <div>
+                <h3>Alle Bilkundene:</h3>
+                <div id="bilKundene"></div>
+                <a class="btn btn-danger" onclick="slettBilKunder()">Slett</a>
             </div>
         </td>
     </tr>
